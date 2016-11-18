@@ -1,3 +1,5 @@
+[ ![Codeship Status for nicohe/foro](https://app.codeship.com/projects/b7c15670-8ea9-0134-6ce6-1aa5e186178e/status?branch=master)](https://app.codeship.com/projects/185320)
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
