@@ -50,4 +50,5 @@ class SubscribeToPostsTests extends FeatureTestCase
 
     $this->seePageIs($post->url);
   }
+  
 }
