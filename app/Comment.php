@@ -13,7 +13,7 @@ class Comment extends Model
     return $this->belongsTo(Post::class);
   }
 
-  public function markAsAnswer()
+    public function markAsAnswer()
   {
     $this->post->pending = false;
 

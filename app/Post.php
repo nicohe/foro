@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class Post extends Model
 {
@@ -33,5 +34,15 @@ class Post extends Model
      public function getUrlAttribute()
      {
        return route('posts.show', [$this->id, $this->slug]);
+     }
+
+     public function latestComments()
+     {
+       return $this->comments()->orderBy('created_at', 'DESC');
+     }
+
+     public function getSafeHtmlContentAttribute()
+     {
+       return Markdown::convertToHtml(e($this->content));
      }
 }
